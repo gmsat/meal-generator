@@ -71,7 +71,7 @@ const useMealGenerator = (scroll) => {
     useEffect(() => {
         if (scroll === "scroll") {
             setTimeout(() => {
-                window.scrollTo({top: 500, behavior: "smooth"})
+                window.scrollTo({top: 300, behavior: "smooth"})
             }, 100)
         }
     }, [data])

@@ -17,5 +17,8 @@
   },
   "author": "",
   "license": "ISC",
-  "homepage": "https://vegetarian-meal-generator.herokuapp.com/"
+  "homepage": "https://vegetarian-meal-generator.herokuapp.com/",
+  "devDependencies": {
+    "concurrently": "^7.2.1"
+  }
 }
