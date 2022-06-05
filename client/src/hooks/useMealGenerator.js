@@ -60,7 +60,11 @@ const useMealGenerator = (scroll) => {
     const [diet, setDiet] = useState("vegetarian")
     const [hiddenGenerator, setHiddenGenerator] = useState(false);
 
-    const url = `http://localhost:4000/api/getMeals?diet=${diet}&calories=${calories}&timeFrame=${timeFrame}`;
+    const productionUrl = "https://vegetarian-meal-generator.herokuapp.com";
+    // const url = `http://localhost:4000/api/getMeals?diet=${diet}&calories=${calories}&timeFrame=${timeFrame}`;
+
+    const url = `${productionUrl}/api/getMeals?diet=${diet}&calories=${calories}&timeFrame=${timeFrame}`;
+
     const {error, loading, data, reFetch, clearData} = useFetch(url, false);
 
     function handleClick() {

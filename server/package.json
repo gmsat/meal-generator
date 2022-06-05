@@ -4,7 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js"
+    "build": "cd client && npm run build",
+    "install": "cd client && npm install",
+    "heroku-postbuild": "npm run install && npm run build",
+    "start": "node server/app.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm start\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
