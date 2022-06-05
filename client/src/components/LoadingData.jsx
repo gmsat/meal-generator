@@ -1,8 +1,11 @@
 import React from 'react';
+import {LinearProgress, Box} from "@mui/material";
 
 const LoadingData = () => {
     return (
-        <div>Loading...</div>
+        <Box sx={{ width: '100%' }}>
+            <LinearProgress />
+        </Box>
     );
 };
 

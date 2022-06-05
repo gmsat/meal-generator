@@ -8,7 +8,7 @@ import ScrollUpButton from "../../components/ScrollUpButton";
 import ExceededQuota from "../../components/ExceededQuota";
 
 const RecipeGeneratorPage = () => {
-    const {MealGenerator, loading, error, timeFrame, data} = useMealGenerator("scroll")
+    const {MealGenerator, loading, error, timeFrame, data, GenerateAgain} = useMealGenerator("scroll")
 
     return (
         <>
@@ -23,6 +23,9 @@ const RecipeGeneratorPage = () => {
                 </Grid>
             </Grid>
             <Grid flex={10} item container flexDirection={"column"} sx={{padding: 5}}>
+                <Grid container margin={"auto"} justifyContent={"center"} marginBottom={5}>
+                    {GenerateAgain}
+                </Grid>
                 {loading && <LoadingData/>}
                 {error && <ShowErrorMessage error={error}/>}
                 {data && data.code === 402 && <ExceededQuota/>}

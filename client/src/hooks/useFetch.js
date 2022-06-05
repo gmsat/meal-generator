@@ -33,7 +33,9 @@ function useFetch(url, fetchOnLoad) {
         fetchData().catch(e => console.log(e))
     }
 
-    return {data, loading, error, reFetch};
+    const clearData = () => setData(null)
+
+    return {data, loading, error, reFetch, clearData};
 }
 
 export default useFetch;
