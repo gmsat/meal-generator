@@ -1,5 +1,5 @@
 const axios = require("axios");
-const apiKey = process.env.SPOONACULAR_API_KEY;
+const apiKey = process.env.SPOONACULAR_API_KEY || "0c67d663f9d8499ab459b53556c45dce";
 
 module.exports = {
     getRecipes: async (req, res) => {
