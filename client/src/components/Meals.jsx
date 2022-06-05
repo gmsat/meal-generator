@@ -35,7 +35,7 @@ const OneMealData = ({data}) => {
 }
 
 const OneMeal = ({mealData, mealId, mealIndex}) => {
-    const {data, loading, error} = useFetch(`http://localhost:4000/getRecipeInfo/${mealId}`, true)
+    const {data, loading, error} = useFetch(`http://localhost:4000/api/getRecipeInfo/${mealId}`, true)
     const isBreakfast = mealIndex === 0 && "Breakfast";
     const isLunch = mealIndex === 1 && "Lunch";
     const isDinner = mealIndex === 2 && "Dinner";

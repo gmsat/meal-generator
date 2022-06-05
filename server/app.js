@@ -8,7 +8,7 @@ const apiRoutes = require("./src/routes/routes");
 
 app.use(cors());
 app.use(express.json());
-app.use("/", apiRoutes);
+app.use("/api", apiRoutes);
 
 app.listen(port, () => {
     console.log(`Listening on port ${port}`);

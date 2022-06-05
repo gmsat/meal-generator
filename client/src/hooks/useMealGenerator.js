@@ -59,7 +59,7 @@ const useMealGenerator = (scroll) => {
     const [timeFrame, setTimeFrame] = useState("day");
     const [diet, setDiet] = useState("vegetarian") // vegetarian, lacto-vegetarian, ovo-vegetarian
 
-    const url = `http://localhost:4000/getMeals?diet=${diet}&calories=${calories}&timeFrame=${timeFrame}`;
+    const url = `http://localhost:4000/api/getMeals?diet=${diet}&calories=${calories}&timeFrame=${timeFrame}`;
     const {error, loading, data, reFetch} = useFetch(url, false);
 
     function handleClick() {
